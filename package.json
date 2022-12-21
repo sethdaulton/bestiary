@@ -21,8 +21,8 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
-    "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.28.0"
   },
   "bugs": {
     "url": "https://github.com/sethdaulton/bestiary/issues"
