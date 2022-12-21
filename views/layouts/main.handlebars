@@ -1,31 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> ~ Working title ~ "B e s t i a r y" </title>
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </head>
+  </head>
+  <body>
     <header>
-    <h1>
-      ~ Working title ~ "B e s t i a r y" 
-    </h1>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
+      <h1>
+        ~ Working title ~ " B e s t i a r y "
+      </h1>
+      
+      {{#if logged_in}}
+        <nav>
+          <button class="btn" id="logout">logout</button>
+        </nav>
+      {{/if}}
     </header>
-<main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-<footer>   
-  </footer>
+    <main class="container container-fluid mt-5">
+      {{{body}}}
+      
+    </main>
+    <footer>
+    </footer>
 
     {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 </html>
