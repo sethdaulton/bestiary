@@ -1,6 +1,16 @@
 [
-    {
-      "name": "Gygax",
+  {
+      "name": "Carlos",
       "password": "password12345"
-    }
-  ]
+  }
+
+  {
+      "name": "Johnson",
+      "password": "password12345"
+  }
+
+  {
+      "name": "Rivera",
+      "password": "password12345"
+  }
+]
