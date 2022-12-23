@@ -13,7 +13,7 @@
         "wis": 10,
         "int": 8,
         "chr": 8
-    }
+    },
 
     {
         "name": "Orc",
@@ -29,7 +29,7 @@
         "wis": 11,
         "int": 7,
         "chr": 10
-    }
+    },
 
     {
         "name": "Demogorgon",
