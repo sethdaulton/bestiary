@@ -1,15 +1,68 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Monster extends Model {}
+class Monster extends Model { }
 
 Monster.init(
   {
-    monster_name: {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-// add in all the other stats
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    AC: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    HD: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    HP: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    CR: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    attack: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    str: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    dex: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    con: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    wis: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    int: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    chr: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,

@@ -22,6 +22,7 @@ const sess = {
     sameSite: 'strict',
   },
   resave: false,
+  secret: "super_secret",
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize

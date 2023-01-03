@@ -1,4 +1,6 @@
-[
+const { Monster } = require('../models');
+
+const seedMonster = () => Monster.bulkCreate([
     {
         "name": "Goblin",
         "description": "A fearsome and cruel little creature.  Only about 3 feet tall, wiry, with green skin,",
@@ -46,4 +48,6 @@
         "int": 17,
         "chr": 25
     }
-]
+]);
+
+module.exports = seedMonster;
