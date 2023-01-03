@@ -1,5 +1,6 @@
 const  express = require ("express");
 const router = express.Router();
+const {Monster} = require("../models");
 
 //login page
 //
@@ -11,7 +12,12 @@ const router = express.Router();
 
 //home page 
 router.get ("/", function (req, res) {
-    res.send("browser game home page");
+    Monster.findAll().then((monsterData) => {
+        let monsters = monsterData.map((m) => m.get({plain: true}));
+        res.render("homepage", { monsters })
+    }).catch((err) => {
+        res.status(500).json({"error":err});
+    })
 });
 
 module.exports = router;

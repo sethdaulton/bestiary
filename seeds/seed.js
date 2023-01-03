@@ -1,18 +1,18 @@
 const sequelize = require('../config/connection');
-const { User, Monster } = require('../models');
+const seedUser = require('./userData');
+const seedMonster = require('./monsterData');
 
-const userData = require('./userData.json');
-const monsterData = require('./monsterData.json');
+const seedAll = async () => {
+  await sequelize.sync({ force: true });
 
-const seedDatabase = async () => {
-    await sequelize.sync({ force: true });
+  await seedUser();
 
-    // need to figure this out
+  await seedMonster();
 
+  process.exit(0);
 };
 
-seedDatabase();
-
+seedAll();
 
 // Notes on Monster Data
 //
