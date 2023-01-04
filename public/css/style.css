@@ -1,5 +1,5 @@
 :root {
-    --primary: #583d3d;
+    --primary: #454545;
     --secondary: #938686;
     --tertiary: #875e5e;
     --quatrinary: #686c67;
@@ -33,6 +33,8 @@
     text-align: center;
     background: var(--primary);
     color: var(--light);
+    font-size: 22pt;
+
   }
   
   main {
@@ -102,8 +104,8 @@
   
   .card header {
     color: var(--light);
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: normal;
+    /* text-transform: uppercase; */
     margin: 0;
     background-color: var(--tertiary);
     padding: 0.625rem;
@@ -112,8 +114,9 @@
   
   .card-body {
     font-size: 1.4rem;
-    text-align: center;
-    font-weight: bold;
+    text-align: left;
+    line-height: normal;
+    /* font-weight: bold; */
   }
   
   .monster-name {
