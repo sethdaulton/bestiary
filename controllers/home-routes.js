@@ -21,5 +21,3 @@ router.get ("/", function (req, res) {
 });
 
 module.exports = router;
-
-// add monster page
