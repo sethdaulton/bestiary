@@ -34,7 +34,6 @@ const newPostFormHandler = async (event) => {
             monster_wis,
             monster_int,
             monster_chr,
-            // all stats here 
         }),
         headers: { 'Content-Type': 'application/json' },
     });
