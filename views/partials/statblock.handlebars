@@ -1,36 +1,42 @@
 <section class="card">
   <header>{{name}}</header>
-  <div id="myDiv">
-    <!-- Plotly chart will be drawn inside this DIV -->
-    <script>
-      data = [{
-        type: 'scatterpolar',
-        r: [10, 10, 12, 10, 18, 10],
-        theta: ['A', 'B', 'C', 'D', 'E', 'A'],
-        fill: 'toself'
-      }]
 
-      layout = {
-        polar: {
-          radialaxis: {
-            visible: true,
-            range: [0, 50]
-          }
-        },
-        showlegend: false
-      }
-
-      Plotly.newPlot("myDiv", data, layout) </script>
-
-  </div>
   <div class="card-body">
+
+    <!--plotly graph of monster data-->
+    <div id="myDiv">
+      
+      <script>
+
+        var xarray = [{{ str }}, {{ dex }}, {{ con }}, {{ wis }}, {{ int }}, {{ chr }}];
+
+        data = [{
+          type: 'scatterpolar',
+          r: xarray,
+          theta: ['STR', 'DEX', 'CON', 'WIS', 'INT', 'CHR'],
+          fill: 'toself'
+        }]
+
+        layout = {
+          polar: {
+            radialaxis: {
+              visible: true,
+              range: [0, 30]
+            }
+          },
+          showlegend: false
+        }
+
+        Plotly.newPlot("myDiv", data, layout);
+      </script>
+    </div>
+
     <p>Description: {{description}}</p>
     <p>AC: {{AC}}</p>
     <p>HD: {{HD}}</p>
     <p>HP: {{HP}}</p>
     <p>CR: {{CR}}</p>
     <p>attack: {{attack}}</p>
-    <p>CR: {{CR}}</p>
     <p>str: {{str}}</p>
     <p>dex: {{dex}}</p>
     <p>con: {{con}}</p>
