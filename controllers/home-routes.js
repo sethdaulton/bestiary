@@ -11,7 +11,7 @@ const {Monster} = require("../models");
 //
 
 //home page 
-router.get ("/", function (req, res) {
+router.get("/", function (req, res) {
     Monster.findAll().then((monsterData) => {
         let monsters = monsterData.map((m) => m.get({plain: true}));
         res.render("homepage", { monsters })
@@ -19,5 +19,9 @@ router.get ("/", function (req, res) {
         res.status(500).json({"error":err});
     })
 });
+
+router.get('/login', (req, res) => {
+    res.render("login")
+})
 
 module.exports = router;

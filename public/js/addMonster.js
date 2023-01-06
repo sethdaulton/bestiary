@@ -22,6 +22,18 @@ const newPostFormHandler = async (event) => {
         method: 'POST',
         body: JSON.stringify({
             monster_name,
+            monster_description,
+            monster_ac,
+            monster_hd,
+            monster_hp,
+            monster_cr,
+            monster_attack,
+            monster_str,
+            monster_dex,
+            monster_con,
+            monster_wis,
+            monster_int,
+            monster_chr,
             // all stats here 
         }),
         headers: { 'Content-Type': 'application/json' },
