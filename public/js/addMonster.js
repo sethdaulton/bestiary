@@ -12,7 +12,7 @@ const newPostFormHandler = async (event) => {
     const monster_dex = document.querySelector('input[name="monster-dex"]').value;
     const monster_con = document.querySelector('input[name="monster-con"]').value;
     const monster_wis = document.querySelector('input[name="monster-wis"]').value;
-    const monster_int = document.querySelector('input[name="monster-int"]').value;
+    const monster_int = documengitt.querySelector('input[name="monster-int"]').value;
     const monster_chr = document.querySelector('input[name="monster-chr"]').value;
     
     // console.log(postTitle);
