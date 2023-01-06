@@ -105,7 +105,6 @@
   .card header {
     color: var(--light);
     font-weight: normal;
-    /* text-transform: uppercase; */
     margin: 0;
     background-color: var(--tertiary);
     padding: 0.625rem;
@@ -116,7 +115,6 @@
     font-size: 1.4rem;
     text-align: left;
     line-height: normal;
-    /* font-weight: bold; */
   }
   
   .monster-name {
