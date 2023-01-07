@@ -1,3 +1,5 @@
+// NEEDS WORK
+
 const newPostFormHandler = async (event) => {
     event.preventDefault();
 
@@ -14,9 +16,6 @@ const newPostFormHandler = async (event) => {
     const monster_wis = document.querySelector('input[name="monster-wis"]').value;
     const monster_int = documengitt.querySelector('input[name="monster-int"]').value;
     const monster_chr = document.querySelector('input[name="monster-chr"]').value;
-    
-    // console.log(postTitle);
-    // console.log(postContent);
 
     const response = await fetch('/api/post', {
         method: 'POST',

@@ -1,8 +1,10 @@
+// Navigates pages - complete
+
 const  express = require ("express");
 const router = express.Router();
 const {Monster} = require("../models");
 
-//home page 
+//home page - complete
 router.get("/", function (req, res) {
     Monster.findAll().then((monsterData) => {
         let monsters = monsterData.map((m) => m.get({plain: true}));

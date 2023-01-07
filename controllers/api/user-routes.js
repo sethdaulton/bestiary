@@ -1,4 +1,5 @@
 // routes for managing login information and signup
+// NEEDS WORK
 
 const router = require('express').Router();
 

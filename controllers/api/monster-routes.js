@@ -1,4 +1,6 @@
 // routes for adding and retrieving monster data
+//
+// NEEDS WORK
 
 const router = require('express').Router();
 
