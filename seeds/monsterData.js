@@ -3,7 +3,7 @@ const { Monster } = require('../models');
 const seedMonster = () => Monster.bulkCreate([
     {
         "name": "Goblin",
-        "description": "A fearsome and cruel little creature.  Only about 3 feet tall, wiry, with green skin,",
+        "description": "A fearsome and cruel little creature.  Only about 3 feet tall, wiry, with green skin.",
         "AC": 11,
         "HD": "2d6",
         "HP": 6,
@@ -14,12 +14,11 @@ const seedMonster = () => Monster.bulkCreate([
         "con": 10,
         "wis": 10,
         "int": 8,
-        "chr": 8
+        "chr": 8,
     },
-
     {
         "name": "Orc",
-        "description": "Brutal, evil creatures with large tusks and twisted features",
+        "description": "Brutal, evil creatures with large tusks and twisted features.",
         "AC": 12,
         "HD": "2d8+6",
         "HP": 17,
