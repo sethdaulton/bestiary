@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS bestiary_db;
+CREATE DATABASE bestiary_db;
