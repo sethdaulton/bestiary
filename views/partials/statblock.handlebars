@@ -4,7 +4,7 @@
   <div class="card-body">
 
     <!--plotly graph of monster data-->
-    <div id="myDiv">
+    <div id="{{id}}"}>
       
       <script>
 
@@ -27,7 +27,7 @@
           showlegend: false
         }
 
-        Plotly.newPlot("myDiv", data, layout);
+        Plotly.newPlot("{{id}}", data, layout);
       </script>
     </div>
 

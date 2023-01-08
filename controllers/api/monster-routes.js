@@ -2,9 +2,11 @@
 //
 // NEEDS WORK
 
+const withAuth = require('../../utils/auth');
+
 const router = require('express').Router();
 
-router.post('/createmonster', async (req, res) => {
+router.post('/createmonster', withAuth, async (req, res) => {
     try {
       const newMonster = await Monster.create({
         ...req.body,
@@ -16,5 +18,7 @@ router.post('/createmonster', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+
 
 module.exports = router;

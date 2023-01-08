@@ -3,6 +3,7 @@
 const  express = require ("express");
 const router = express.Router();
 const {Monster} = require("../models");
+const withAuth = require("../utils/auth");
 
 //home page - complete
 router.get("/", function (req, res) {
@@ -20,7 +21,7 @@ router.get('/login', (req, res) => {
 })
 
 //create monster page
-router.get('/createmonster', (req, res) => {
+router.get('/createmonster', withAuth, (req, res) => {
     res.render("createmonster")
 })
 
