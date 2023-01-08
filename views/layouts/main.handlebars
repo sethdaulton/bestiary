@@ -17,6 +17,31 @@
   <!-- Include Plotly.js -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link rel="stylesheet" href="/css/style.css" />
+
+  </head>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Bestiary
+      </h1>
+      <a href="/">Home</a>
+      <a href="/login">Login</a>
+      <a href="/createmonster">Create Monster</a>
+      
+      {{#if logged_in}}
+        <nav>
+          <button class="btn" id="logout">logout</button>
+        </nav>
+      {{/if}}
+    </header>
+    <main class="container container-fluid col-12 mt-5 justify-content-center">
+      {{{body}}}
+      
+    </main>
+    <footer>
+    </footer>
+
 </head>
 </head>
 
