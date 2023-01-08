@@ -1,5 +1,7 @@
 // routes for managing login information and signup
 
+const User = require('../../models/User');
+
 const router = require('express').Router();
 
 // login
@@ -31,10 +33,12 @@ router.post('/login', async (req, res) => {
         });
 
     } catch (err) {
-        res.status(400).json(err);
+        res.status(500).json(err);
+        console.error(err);
     }
 });
 
 // signup
+// like login but taking body and putting User.create{res.body}
 
 module.exports = router;

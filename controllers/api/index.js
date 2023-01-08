@@ -1,3 +1,5 @@
+// Connecting monster-routes api and user-routes api
+
 const router = require('express').Router();
 
 const monsterRoutes = require('./monster-routes.js');
