@@ -1,5 +1,3 @@
-// NEEDS WORK
-
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
@@ -10,7 +8,7 @@ const loginFormHandler = async (event) => {
         method: 'POST',
         body: JSON.stringify({
             username: usernameEl.value,
-            password: passwordEl.value, 
+            password: passwordEl.value,
         }),
         headers: { 'Content-Type': 'application/json' },
     });

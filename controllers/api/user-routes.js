@@ -1,5 +1,4 @@
 // routes for managing login information and signup
-// NEEDS WORK
 
 const User = require('../../models/User');
 

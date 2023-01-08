@@ -1,17 +1,17 @@
-// Navigates pages - complete
+// Navigates pages
 
-const  express = require ("express");
+const express = require("express");
 const router = express.Router();
-const {Monster} = require("../models");
+const { Monster } = require("../models");
 const withAuth = require("../utils/auth");
 
-//home page - complete
+//home page
 router.get("/", function (req, res) {
     Monster.findAll().then((monsterData) => {
-        let monsters = monsterData.map((m) => m.get({plain: true}));
+        let monsters = monsterData.map((m) => m.get({ plain: true }));
         res.render("homepage", { monsters })
     }).catch((err) => {
-        res.status(500).json({"error":err});
+        res.status(500).json({ "error": err });
     })
 });
 

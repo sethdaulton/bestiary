@@ -1,5 +1,3 @@
-// NEEDS WORK
-
 const newPostFormHandler = async (event) => {
     event.preventDefault();
 
