@@ -30,9 +30,12 @@
   header {
     padding: 40px;
     text-align: center;
-    background: var(--primary);
+    background: rgb(252,0,0);
+background: linear-gradient(177deg, rgba(252,0,0,1) 0%, rgba(107,3,3,1) 100%);
+    /* background: var(--primary); */
     color: var(--light);
-    font-size: 22pt;
+    font-size: 16pt;
+    font-family: 'Times New Roman', Times, serif;
 
   }
   
@@ -66,6 +69,11 @@
     color: var(--secondary);
     background-color: var(--dark);
   }
+
+  a:hover {
+    color:rgb(25, 25, 25);
+  }
+
    
   .btn-no-style {
     background: none;
@@ -81,7 +89,7 @@
   /* CARDS */
   .card {
     margin: 20px;
-    margin-left: 25%;
+    margin-left: 28%;
     flex: 0 1 300px;
     border: 7px double var(--dark);
     border-radius: 10px;
@@ -144,6 +152,23 @@
   }
 
   h2 {
-    
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .btn {
+    background:rgb(60, 60, 60);
+    color: white;
+  }
+
+  .btn-hover {
+    background:rgb(25, 25, 25)
+  }
+
+  .space-bottom {
+    margin-bottom: 15px;
+  }
+
+  .space-right {
+    margin-right: 25%;
   }
   
