@@ -12,3 +12,8 @@ https://knave-bestiary.herokuapp.com/
 
 ![Bestiary Homepage](./public/images/BestiaryScreenShot.png)
 
+## Contact Info
+
+Seth Daulton - seth.daulton@gmail.com
+Diana Macias - dianamacias1218@icloud.com
+Skipper Thurman - slthurman01@gmail.com
