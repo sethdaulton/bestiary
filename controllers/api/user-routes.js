@@ -1,13 +1,14 @@
 // routes for managing login information and signup
+const router = require('express').Router();
 
 const User = require('../../models/User');
-
-const router = require('express').Router();
 
 // login
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { username: req.body.username } });
+        const userData = await User.findOne({
+            where: { username: req.body.username }
+        });
 
         if (!userData) {
             res
@@ -40,5 +41,26 @@ router.post('/login', async (req, res) => {
 
 // signup
 // like login but taking body and putting User.create{res.body}
+router.post('/signup', async (req, res) => {
+    console.log(`========================`)
+    console.log("signup route pinged");
+    try {
+        const dbUserData = await User.create({
+            username: req.body.username,
+            password: req.body.password,
+        });
+
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.loggedIn = true;
+
+            res.status(200).json(dbUserData);
+        });
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;
